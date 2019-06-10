@@ -16,11 +16,12 @@ import { RoutingModule } from './routing/routing.module';
     GithubUsersComponent,
     NotFoundComponent,
     SearchComponent,
-    RoutingModule
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
