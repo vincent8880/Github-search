@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { resolve } from 'url';
-import { reject } from 'q';
 import { HttpClient } from '@angular/common/http';
 import { Users } from '../users';
 import { Repos } from '../repos';

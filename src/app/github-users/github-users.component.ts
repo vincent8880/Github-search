@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitRequestService } from '../git-http/git-request.service';
 import { Users } from '../users';
-import { Repos } from '../git-class/repos';
+
 
 @Component({
   selector: 'app-github-users',
