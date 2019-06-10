@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchComponent } from './search/search.component';
 import { RoutingModule } from './routing/routing.module';
 import { FontChangerDirective } from './font-changer.directive';
+import { LastNamePipe } from './last-name.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FontChangerDirective } from './font-changer.directive';
     NotFoundComponent,
     SearchComponent,
     FontChangerDirective,
+    LastNamePipe,
 
   ],
   imports: [
