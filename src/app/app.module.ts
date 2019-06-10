@@ -8,6 +8,7 @@ import { GithubUsersComponent } from './github-users/github-users.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchComponent } from './search/search.component';
 import { RoutingModule } from './routing/routing.module';
+import { FontChangerDirective } from './font-changer.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RoutingModule } from './routing/routing.module';
     GithubUsersComponent,
     NotFoundComponent,
     SearchComponent,
+    FontChangerDirective,
 
   ],
   imports: [
