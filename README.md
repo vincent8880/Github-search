@@ -1,27 +1,24 @@
-# Github
+# Github Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+A site that uses Github API to search and display the results to the user
 
-## Development server
+## Description
+The navbar on the website has two paths.
+  1.Search github user - searches strictly for the Github username
+  2.Search github repository- searches strictly for the Github Repository
+  The website is made using Angular.js framework
+## Specifications
+| Behavior                  | Input                     | Output                    | 
+| ------------------------- | ------------------------- | ------------------------- |
+| Show github profile | Enter the Username in the search box without spaces and hit search | Displays name, username, number of repositories, Hireable, date of creating the repo, followers, following and lists the repos  |
+| Searcg for repos      | Click on `Find Gihub Repository` and type the name of repository. Spaces are allowed in this case | Displays a list of 10 repositories based on the query. |
+| Load more search Results | Click `Load More` button on the Find Repos page | Adds 10 more results in the search results  |
+| Redirect to a specific github profile on Github website | Click the username of a Github user to redirect | Opens the profile on the Github website |
+| Redirect to a specific Github Repository | Click the repository name to redirect | Opens the Repository on Github website |
+## Known Bugs
+No bugs so far. If found, email me at ododovincent54@gmail.com
+## contact details
+Contact me on ododovincent54@gmail.com for any comments, reviews or advice.
+## License
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
