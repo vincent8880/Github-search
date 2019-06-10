@@ -32,7 +32,7 @@ import { FontChangerDirective } from './font-changer/font-changer.directive';
     RoutingModule,
     HttpClientModule,
     FormsModule,
-    NgProgressModule.forRoot(),
+    NgProgressModule,
     NgProgressHttpModule
   ],
   providers: [],

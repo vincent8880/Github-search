@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  clientId: 'a352bbc751cc1279c620',
-  clientSecret: 'c00155fe6a526589678b9891a5154c240851cb98'
+  accessToken: "64d40aa2da28678a5af17ea977e4230d51307a58"
 };
 
 /*
