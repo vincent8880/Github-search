@@ -1,34 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { UppercasePipe } from './pipes/uppercase.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
+import { FormsModule } from '@angular/forms';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+
+
+import { AppComponent } from './app.component';
+import { GithubUsersComponent } from './github-users/github-users.component';
+import { GitReposComponent } from './git-repos/git-repos.component';
+import { SearchComponent } from './search/search.component';
+//Routing module
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LastNamePipe } from './lastname-pipe/last-name.pipe';
+import { FontChangerDirective } from './font-changer/font-changer.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    UserProfileComponent,
+    GithubUsersComponent,
+    GitReposComponent,
+    SearchComponent,
     NotFoundComponent,
-    UppercasePipe,
-    HighlightDirective
+    LastNamePipe,
+    FontChangerDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
+    RoutingModule,
     HttpClientModule,
-    NgbModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
