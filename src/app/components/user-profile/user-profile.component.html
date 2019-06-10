@@ -1,0 +1,46 @@
+<form #userForm="ngForm" (ngSubmit)="getUser(userForm)">
+    <div class="form-group">
+        <label for="typeahead-http">Search here</label>
+        <input id="typeahead-http" type="text" class="form-control" [class.is-invalid]="searchFailed" [(ngModel)]="model" name="search" [ngbTypeahead]="Type username or repository" placeholder="G" />
+        <div *ngIf="searching"><img class="mt-2 rounded mx-auto d-block" src="/src/assets/giphy.gif" alt="loader..."></div>
+        <div class="invalid-feedback" *ngIf="searchFailed">Sorry, suggestions could not be found ,please try again later.</div>
+    </div>
+    <input [disabled]="!userForm.form.valid" type="submit" value="Submit" class="btn btn-success">
+</form>
+
+<div class="row mt-3" *ngIf="user">
+    <div class="col-md-3">
+        <div class="card">
+            <img class="card-img-top img-fluid" src="{{user.avatarUrl}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{user.name}}</h5>
+                <p class="card-text">{{user.login}}</p>
+                <p class="card-text">{{user.bio}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <span class="nav-link">Repositories <span class="badge badge-secondary">{{user.publicRepos}}</span></span>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link">Followers <span class="badge badge-secondary">{{user.followers}}</span></span>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link">Following <span class="badge badge-secondary">{{user.following}}</span></span>
+            </li>
+        </ul>
+        <div *ngFor="let repo of repos">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">{{repo.name}}</h4>
+                    <h6 class="card-subtitle mb-2">{{repo.description}}</h6>
+                    <p class="card-text">{{repo.language}}</p>
+                    <a class="btn btn-primary" href="{{repo.svnUrl}}" target="_blank">View repository on Github</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>.

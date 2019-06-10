@@ -1,39 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GitReposComponent } from './git-repos/git-repos.component';
-import { GithubUsersComponent } from './github-users/github-users.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchComponent } from './search/search.component';
-import { RoutingModule } from './routing/routing.module';
-import { FontChangerDirective } from './font-changer.directive';
-import { LastNamePipe } from './last-name.pipe';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UppercasePipe } from './pipes/uppercase.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitReposComponent,
-    GithubUsersComponent,
+    NavbarComponent,
+    UserProfileComponent,
     NotFoundComponent,
-    SearchComponent,
-    FontChangerDirective,
-    LastNamePipe,
-
+    UppercasePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RoutingModule,
-    NgProgressModule,
-    NgProgressHttpModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
