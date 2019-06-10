@@ -14,7 +14,7 @@ import { SearchComponent } from './search/search.component';
 import { RoutingModule } from './routing/routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LastNamePipe } from './lastname-pipe/last-name.pipe';
-import { FontChangerDirective } from './font-changer/font-changer.directive';
+
 
 
 @NgModule({
@@ -25,7 +25,6 @@ import { FontChangerDirective } from './font-changer/font-changer.directive';
     SearchComponent,
     NotFoundComponent,
     LastNamePipe,
-    FontChangerDirective
   ],
   imports: [
     BrowserModule,

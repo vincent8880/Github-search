@@ -25,11 +25,7 @@
               <td>{{users.public_repos}}</td>
             </tr>
             <tr>
-              <th scope="row">Hireable:</th>
-              <td>{{users.hireable}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Profile Create Date:</th>
+              <th scope="row">Date created:</th>
               <td>{{users.created_at}}</td>
             </tr>
             <tr>
@@ -56,7 +52,7 @@
           <tbody>
             <tr *ngFor='let repository of gitUserRepos.newRepo'>
               <td>
-                <a href="{{repository.html_url}}" target="_blank" appFontChanger>{{repository.name}}</a>
+                <a href="{{repository.html_url}}" target="_blank" >{{repository.name}}</a>
                 <br>
                 <p>Description: {{repository.description}}</p>
                 <br>

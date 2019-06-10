@@ -1,5 +1,5 @@
-.bg-dark {
-  background-color: black !important;
+.bg-primary {
+  background-color: darkcyan !important;
 }
 
 .navbar-light .navbar-nav .show>.nav-link,
@@ -29,4 +29,7 @@ a.nav-link{
     margin-left: 20%;
     height: 3rem;
   }
+}
+.body{
+  background-color: aqua
 }

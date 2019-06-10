@@ -1,7 +1,7 @@
 .form-control{
     padding: 0.7em;
     border-radius: 0.5rem;
-    width: 333px;
+    width: 800px;
     margin-right: 1rem;
 }
 .form-group{
@@ -11,7 +11,7 @@
 @media (max-width: 591px){
     button{
         display: none;
-    }    
+    }
     .form-control{
         width: 100%;
     }

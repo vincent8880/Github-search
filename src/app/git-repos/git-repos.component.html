@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row search">
     <div class="col-md-12 search-bar">
+        <p><i>ENTER REPOSITORY NAME BELOW</i></p>
       <app-search (getName)='searchRepos($event)'></app-search>
-      <p>Enter repository name to perform a search e.g pig dice</p>
+
       <p class="display">Displaying {{resultCount}} results</p>
       <br>
       <hr>
@@ -16,7 +17,7 @@
             <tr *ngFor='let repository of gitRepoRequest.searchRepo'>
               <td>
                 <h4>
-                  <a href="{{repository.html_url}}" appFontChanger>{{repository.name}}</a>
+                  <a href="{{repository.html_url}}" >{{repository.name}}</a>
                 </h4>
                 <p>Owner:
                   <a href="{{repository.owner.html_url}}" target="_blank">{{repository.owner.login}}</a>
@@ -31,7 +32,7 @@
       </div>
     </div>
     <div class="col-md-12 submit-button">
-      <button class="btn btn-outline-warning" (click)="loadMore()">Load More</button>
+      <button class="btn btn-info" (click)="loadMore()">Load More</button>
     </div>
   </div>
 </div>

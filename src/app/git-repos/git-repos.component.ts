@@ -10,7 +10,7 @@ import { Repos } from '../git-class/repos';
 })
 export class GitReposComponent implements OnInit {
   repos:Repos;
-  public newName:string = "anitas+Kitchen"
+  public newName:string = "pig+dice"
   public nameToSearch:string;
   public resultCount = 10;
 
@@ -23,7 +23,7 @@ export class GitReposComponent implements OnInit {
         this.newName = this.newName.concat(name.charAt(i))
       }
     }
-    this.resultCount=10;    
+    this.resultCount=10;
     // console.log(this.newName);
     // this.ngOnInit();
     this.getDataFunction()
@@ -43,7 +43,7 @@ export class GitReposComponent implements OnInit {
   }
   getDataFunction(){
     this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
-    // console.log(this.gitRepoRequest);    
+    // console.log(this.gitRepoRequest);
   }
 
 }
