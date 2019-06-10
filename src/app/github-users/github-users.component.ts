@@ -10,7 +10,7 @@ import { Repos } from '../git-class/repos';
   providers:[GitRequestService]
 })
 export class GithubUsersComponent implements OnInit {
-  public nameToSearch = 'devwaweru';
+  public nameToSearch = 'vincent8880';
   public newName;
   users:Users;
   repo=[]
@@ -20,12 +20,12 @@ export class GithubUsersComponent implements OnInit {
     for(var i=0;i<name.length;i++){
       if(name.charAt(i)===" "||name.charAt(i)==="?"||name.charAt(i)==="/"){
       alert(`Invalid username. Username should not have spaces`);
-      this.newName = 'devwaweru';
+      this.newName = 'vincent8880';
       break;
       }else if(name.charAt(i)!==" "||name.charAt(i)!=="?"||name.charAt(i)!=="/"){
         this.newName = this.newName.concat(name.charAt(i));
         // console.log(name.charAt(i));
-      } 
+      }
     }
     this.nameToSearch=this.newName;
     // console.log(this.newName);
